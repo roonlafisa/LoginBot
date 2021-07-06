@@ -43,11 +43,12 @@ namespace LoginBot
             //Identify and click Login
             webDriver.FindElement(By.XPath("//input[@value='Log in']")).Submit();
 
-            //Username
-            var txtEmployeeDetails = webDriver.FindElement(By.Name("Employee Details"));
 
-            //Verify or Assert that Username is displayed
-            Assert.That(txtEmployeeDetails.Displayed, Is.True);
+            //Username
+            var lnkEmployeeDetails = webDriver.FindElement(By.LinkText("Employee Details"));
+
+            //Verify or Assert that Employee Details
+            Assert.That(lnkEmployeeDetails.Displayed, Is.True);
         }
     }
 }
